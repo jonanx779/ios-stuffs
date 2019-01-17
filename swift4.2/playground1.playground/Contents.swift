@@ -21,3 +21,21 @@ case let (x, y):
 
 // In this case default case is not needed,
 // because the case let (x, y) fit all remining values.
+
+// How to use switch with fallthrough
+
+let intergerToDescribe = 5
+
+var description = "The number \(intergerToDescribe) is"
+
+switch intergerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " a prime number, and also"
+    fallthrough
+default:
+    description += " an integer."
+}
+
+print(description)
+
+// In the example above, the behaviour of the switch is different, BTW as in C, the switch will fall also in the default case.
