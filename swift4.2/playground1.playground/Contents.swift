@@ -39,3 +39,30 @@ default:
 print(description)
 
 // In the example above, the behaviour of the switch is different, BTW as in C, the switch will fall also in the default case.
+
+
+
+// Functions
+func bmiCalculator(weight: Int, height: Float) -> Int {
+    var resultado : Int
+    resultado = Int((weight/Int((pow(height, 2)))))
+    return resultado
+}
+
+bmiCalculator(weight: 72, height: 1.78);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
