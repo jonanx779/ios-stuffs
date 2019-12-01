@@ -43,10 +43,18 @@ print(description)
 
 
 // Functions
-func bmiCalculator(weight: Int, height: Float) -> Int {
-    var resultado : Int
-    resultado = Int((weight/Int((pow(height, 2)))))
-    return resultado
+func bmiCalculator(weight: Float, height: Float) -> String {
+    var resultado : Float
+    resultado = (weight/(pow(height, 2)))
+
+    if(resultado >= 25){
+        return "You overweight my friend!, excersice is your friend also!"
+    } else if(resultado >= 18.5 || resultado <= 25){
+        return "You are on the right weight!"
+    }else{
+        return "You are underweight!"
+    }
+    
 }
 
 bmiCalculator(weight: 72, height: 1.78);
